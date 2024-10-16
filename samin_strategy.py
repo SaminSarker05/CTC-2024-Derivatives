@@ -17,5 +17,20 @@ class Strategy:
     self.underlying.columns = self.underlying.columns.str.lower()
 
   def generate_orders(self) -> pd.DataFrame:
-    # implement me!
-    pass
+    """
+      each order is a dictionary with:
+        - Datetime (date/time of trade)
+        - Option Symbol (unique identifier for option; in table)
+        - Action (Buy or Sell)
+        - Order size (# of contracts)
+    """
+    orders = []
+
+    # index data    SPY  underlying_data_hour.csv
+    # options data  SPX  cleaned_options_data.zip
+    # minute level price data of options
+
+    # trades must meet margin requirements for risk management
+    # premium paid + 10% of strike price
+
+    return pd.DataFrame(orders)
